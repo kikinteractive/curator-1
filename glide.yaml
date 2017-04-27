@@ -1,0 +1,25 @@
+package: github.com/kikinteractive/curator-go
+import:
+- package: github.com/bkaradzic/go-lz4
+  version: v1.0.0
+- package: github.com/curator-go/curator
+- package: github.com/fanliao/go-promise
+- package: github.com/pmezard/go-difflib
+  version: v1.0.0
+  subpackages:
+  - difflib
+- package: github.com/samuel/go-zookeeper
+  subpackages:
+  - zk
+- package: github.com/stretchr/testify
+  version: v1.1.4
+  subpackages:
+  - assert
+  - mock
+  - suite
+- package: github.com/tevino/abool
+testImport:
+- package: github.com/smartystreets/goconvey
+  version: 1.6.2
+  subpackages:
+  - convey

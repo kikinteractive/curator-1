@@ -1,0 +1,50 @@
+hash: 0b98b0be9a8bf36d7042e6b3c4a6e21c12309ea135dec5ceed6f21dff2bb2720
+updated: 2017-04-27T12:46:30.288611291+03:00
+imports:
+- name: github.com/bkaradzic/go-lz4
+  version: 74ddf82598bc4745b965729e9c6a463bedd33049
+- name: github.com/curator-go/curator
+  version: 3844cf4b76fd7c67981c6be153cadd9d054ea03c
+- name: github.com/davecgh/go-spew
+  version: 6d212800a42e8ab5c146b8ace3490ee17e5225f9
+  subpackages:
+  - spew
+- name: github.com/fanliao/go-promise
+  version: 1890db352a72f9e6c6219c20111355cddc795297
+- name: github.com/pmezard/go-difflib
+  version: 792786c7400a136282c1664665ae0a8db921c6c2
+  subpackages:
+  - difflib
+- name: github.com/samuel/go-zookeeper
+  version: 1d7be4effb13d2d908342d349d71a284a7542693
+  subpackages:
+  - zk
+- name: github.com/stretchr/objx
+  version: cbeaeb16a013161a98496fad62933b1d21786672
+- name: github.com/stretchr/testify
+  version: 69483b4bd14f5845b5a1e55bca19e954e827f1d0
+  subpackages:
+  - assert
+  - mock
+  - require
+  - suite
+- name: github.com/tevino/abool
+  version: 3c25f2fe7cd0ef3eabefce1d90efd69a65d35b12
+testImports:
+- name: github.com/gopherjs/gopherjs
+  version: 265040a1352e0bb611e87f5b985bf83600c66cce
+  subpackages:
+  - js
+- name: github.com/jtolds/gls
+  version: bb0351aa7eb6f322f32667d51375f26a2bca6628
+- name: github.com/smartystreets/assertions
+  version: c9ee7d9e9a2aeec0bee7c4a516f3e0ad7cb7e558
+  subpackages:
+  - internal/go-render/render
+  - internal/oglematchers
+- name: github.com/smartystreets/goconvey
+  version: d4c757aa9afd1e2fc1832aaab209b5794eb336e1
+  subpackages:
+  - convey
+  - convey/gotest
+  - convey/reporting
