@@ -1,3 +1,5 @@
+Note: this is (obviously) a fork from the original curator-go. This fork was created to host a missing recipe - the ConnectionWrapper. rerfer to this commit - 8a0724b587dee7a06671fc12970f1d534bf410bd. The connection wrapper is a gutted version of the cache recipe. Most of the functionality was stripped away leaving just a wrapper around the zookeeper connection, which allows listening to connection-level events (reconnection etc). This functionality was needed for the xiphias-go-registry repo.
+
 # What is Curator?
 
 Curator n ˈkyoor͝ˌātər: a keeper or custodian of a museum or other collection - A ZooKeeper Keeper.
