@@ -7,7 +7,7 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/curator-go/curator"
+	"github.com/kikinteractive/curator-go"
 	"github.com/samuel/go-zookeeper/zk"
 )
 
@@ -160,6 +160,11 @@ func (tn *TreeNode) wasDeleted() {
 // processWatchEvent processes watch events.
 func (tn *TreeNode) processWatchEvent(evt *zk.Event) {
 	tn.tree.logger.Debugf("ProcessWatchEvent: %v", evt)
+
+	if tn.tree.state.Value() == curator.STOPPED {
+		return
+	}
+
 	switch evt.Type {
 	case zk.EventNodeCreated:
 		if tn.parent != nil {

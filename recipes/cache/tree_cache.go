@@ -13,7 +13,7 @@ import (
 	"math"
 	"strings"
 
-	"github.com/curator-go/curator"
+	"github.com/kikinteractive/curator-go"
 	"github.com/tevino/abool"
 )
 
