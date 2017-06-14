@@ -13,12 +13,12 @@ Using Curator
 
 The Curator-go are available from github.com.
 
-	$ go get github.com/curator-go/curator
+	$ go get github.com/kikinteractive/curator-go
 
 You can easily include Curator-go into your code.
 
 	import (
-	    "github.com/curator-go/curator"
+	    "github.com/kikinteractive/curator-go"
 	)
 
 
