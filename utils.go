@@ -79,8 +79,8 @@ func (s *State) Value() State {
 	return State(atomic.LoadInt32((*int32)(s)))
 }
 
-func (s State) Check(state State, msg string) {
-	if s != state {
+func (s *State) Check(state State, msg string) {
+	if atomic.LoadInt32((*int32)(s)) != int32(state) {
 		panic(msg)
 	}
 }
