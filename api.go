@@ -1,6 +1,8 @@
 package curator
 
 import (
+	"errors"
+
 	"github.com/samuel/go-zookeeper/zk"
 )
 
@@ -20,6 +22,7 @@ var (
 	ErrClosing                 = zk.ErrClosing
 	ErrNothing                 = zk.ErrNothing
 	ErrSessionMoved            = zk.ErrSessionMoved
+	ErrNotConnected            = errors.New("curator-go: no zookeeper connection")
 )
 
 var (

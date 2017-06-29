@@ -58,7 +58,7 @@ func newRetryLoop(retryPolicy RetryPolicy, tracer TracerDriver) *retryLoop {
 
 // return true if the given Zookeeper result code is retry-able
 func (l *retryLoop) ShouldRetry(err error) bool {
-	if err == zk.ErrSessionExpired || err == zk.ErrSessionMoved {
+	if err == zk.ErrSessionExpired || err == zk.ErrSessionMoved || err == ErrNotConnected {
 		return true
 	}
 

@@ -200,9 +200,7 @@ func (s *connectionState) Conn() (ZookeeperConnection, error) {
 	}
 
 	if !s.isConnected.Load() {
-		if err := s.checkTimeout(); err != nil {
-			return nil, err
-		}
+		return nil, ErrNotConnected
 	}
 
 	return s.zooKeeper.getZookeeperConnection()
