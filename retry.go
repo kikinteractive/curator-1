@@ -76,16 +76,17 @@ func (l *retryLoop) CallWithRetry(proc func() (interface{}, error)) (interface{}
 		} else {
 			l.retryCount++
 
-			if sleeper := l.retrySleeper; sleeper == nil {
+			sleeper := l.retrySleeper
+			if sleeper == nil {
 				sleeper = DefaultRetrySleeper
-			} else {
-				if !l.retryPolicy.AllowRetry(l.retryCount, time.Now().Sub(l.startTime), sleeper) {
-					l.tracer.AddCount("retries-disallowed", 1)
+			}
 
-					return ret, err
-				} else {
-					l.tracer.AddCount("retries-allowed", 1)
-				}
+			if !l.retryPolicy.AllowRetry(l.retryCount, time.Now().Sub(l.startTime), sleeper) {
+				l.tracer.AddCount("retries-disallowed", 1)
+
+				return ret, err
+			} else {
+				l.tracer.AddCount("retries-allowed", 1)
 			}
 		}
 	}
